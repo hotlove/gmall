@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: gmall-user-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.99.113.40:1111
+        namespace: fdd59bb9-821d-4ed8-bf4e-88efac101747 #dev namespace
