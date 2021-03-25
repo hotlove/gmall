@@ -1,10 +1,5 @@
 server:
   port: 9101
-
 spring:
-  application:
-    name: gmall-user-auth
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 47.99.113.40:1111
+  profiles:
+    active: dev

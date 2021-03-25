@@ -1,0 +1,21 @@
+# 自定义的配置项，用于设置路由信息所载的配置文件，比如这里是 group + dataId
+gateway:
+  dynamicRoute:
+    enabled: true
+    dataType: nacos
+    dataId: gmall-gateway-dev.json
+    group: DEV_GROUP
+    namespace: fdd59bb9-821d-4ed8-bf4e-88efac101747 #dev namespace
+
+spring:
+  application:
+    name: gmall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.99.113.40:1111
+        namespace: ${gateway.dynamicRoute.namespace}
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由 可以实现服务的负载均衡
