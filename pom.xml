@@ -11,6 +11,8 @@
     <modules>
         <module>gmall-gateway</module>
         <module>gmall-user-auth</module>
+        <module>gmall-common</module>
+        <module>gmall-user-auth-controller</module>
     </modules>
 
     <!-- 统一管理jar包-->
@@ -43,6 +45,12 @@
                 <version>Hoxton.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId></groupId>
+                        <artifactId></artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!--spring cloud alibaba 2.1.0.RELEASE-->
             <dependency>

@@ -10,6 +10,12 @@ gateway:
 spring:
   application:
     name: gmall-gateway
+  zipkin:
+    base-url: http://localhost:9411
+    discoveryClientEnabled: false #让nacos把它当成一个URL，而不要当做服务名
+  sleuth:
+    sampler:
+      probability: 1
   cloud:
     nacos:
       discovery:
@@ -19,3 +25,11 @@ spring:
       discovery:
         locator:
           enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由 可以实现服务的负载均衡
+
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)
+ribbon:
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+  ConnectTimeout: 5000
+
