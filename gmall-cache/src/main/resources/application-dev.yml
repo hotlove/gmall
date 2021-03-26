@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gmall-cache
+  zipkin:
+    base-url: http://localhost:9411
+    discoveryClientEnabled: false #让nacos把它当成一个URL，而不要当做服务名
+  sleuth:
+    sampler:
+      probability: 1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.99.113.40:1111
+        namespace: fdd59bb9-821d-4ed8-bf4e-88efac101747
