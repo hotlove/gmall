@@ -12,3 +12,26 @@ spring:
       discovery:
         server-addr: 47.99.113.40:1111
         namespace: fdd59bb9-821d-4ed8-bf4e-88efac101747
+  redis:
+    # Redis数据库索引(默认为0)
+    database: 0
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接密码(默认为空)
+    password: 123456
+    # 连接超时时间（毫秒）
+    timeout: 5000
+    lettuce:
+      # 关闭超时时间
+      shutdown-timeout: 100
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 10000
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 0
