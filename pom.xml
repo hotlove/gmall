@@ -13,6 +13,8 @@
         <module>gmall-user-auth</module>
         <module>gmall-common</module>
         <module>gmall-user-auth-controller</module>
+        <module>gmall-cache</module>
+        <module>gmall-search</module>
     </modules>
 
     <!-- 统一管理jar包-->
