@@ -15,5 +15,15 @@ import javax.annotation.Resource;
 public class RedisExecutor implements CacheExecutor{
 
     @Resource
-    private RedisTemplate RedisTemplate;
+    private RedisTemplate redisTemplate;
+
+    @Override
+    public boolean setKeyValue(String key, String value) {
+        return false;
+    }
+
+    @Override
+    public boolean getValueByKey(String key) {
+        return false;
+    }
 }
