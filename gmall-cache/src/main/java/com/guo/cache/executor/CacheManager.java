@@ -17,6 +17,6 @@ public class CacheManager {
     private CacheExecutor cacheExecutor;
 
     public CacheExecutor getCacheExecutor() {
-        return null;
+        return cacheExecutor;
     }
 }
